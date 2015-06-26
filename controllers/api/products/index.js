@@ -26,7 +26,7 @@ module.exports = function (router) {
 
     productsLib.getByCode(code, function(error, product){
 
-  router.get('/:id', function (req, res) {
+      router.get('/:id', function (req, res) {
 
     var id = req.params.id;
 
