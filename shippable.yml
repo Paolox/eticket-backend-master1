@@ -10,7 +10,7 @@ node_js:
 
 env:
   global:
-    - OPENSHIFT_REPO=ssh://554ec2fd4382ecb5a5000212@etickettest-mespinozas.rhcloud.com/~/git/etickettest.git/
+    - OPENSHIFT_REPO=ssh://558d943b5973caa0b400011b@etickettest-paoloherrera.rhcloud.com/~/git/etickettest.git/
 
 before_install:
   - git remote -v | grep ^openshift || git remote add -m master openshift $OPENSHIFT_REPO

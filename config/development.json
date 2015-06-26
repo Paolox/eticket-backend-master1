@@ -1,6 +1,6 @@
 {
   "databaseConfig": {
-    "mongoDbUrl" : "mongodb://admin:3pmz2pmSUx8N@localhost:27017/",
+    "mongoDbUrl" : "mongodb://admin:nD6FV4mfwIwd@localhost:27017/",
     "dbName": "etickettest"
   },
 
@@ -9,7 +9,7 @@
       "level" : "debug",
       "colorize": true,
       "safe"  : "false",
-      "dbUri" : "mongodb://admin:3pmz2pmSUx8N@localhost:27017/etickettest"
+      "dbUri" : "mongodb://admin:nD6FV4mfwIwd@localhost:27017/etickettest"
   },
 
   "middleware": {
