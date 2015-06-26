@@ -1,0 +1,35 @@
+{
+  "databaseConfig": {
+    "mongoDbUrl" : "mongodb://admin:3pmz2pmSUx8N@localhost:27017/",
+    "dbName": "etickettest"
+  },
+
+  "winstonConfig": {
+      "collection" : "logs",
+      "level" : "debug",
+      "colorize": true,
+      "safe"  : "false",
+      "dbUri" : "mongodb://admin:3pmz2pmSUx8N@localhost:27017/etickettest"
+  },
+
+  "middleware": {
+
+      "devtools": {
+          "enabled": true,
+          "priority": 35,
+          "module": {
+              "name": "kraken-devtools",
+              "arguments": [
+                  "path:./public",
+                  "path:./.build",
+                  {
+                      "copier": {
+                          "module": "kraken-devtools/plugins/copier",
+                          "files": "**/*"
+                      }
+                  }
+              ]
+          }
+      }
+  }
+}

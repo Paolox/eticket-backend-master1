@@ -1,0 +1,35 @@
+# Build Environment
+build_environment: Ubuntu 12.04
+
+# language setting
+language: node_js
+
+# version numbers
+node_js:
+  - "0.10"
+
+env:
+  global:
+    - OPENSHIFT_REPO=ssh://554ec2fd4382ecb5a5000212@etickettest-mespinozas.rhcloud.com/~/git/etickettest.git/
+
+before_install:
+  - git remote -v | grep ^openshift || git remote add -m master openshift $OPENSHIFT_REPO
+
+services:
+  - mongodb
+
+install:
+  - npm install
+
+before_script:
+  - grunt build
+
+script:
+  - npm test
+
+after_success:
+  - . ./scripts/deploy.sh
+
+notifications:
+    email:
+        - mario.espinoza@gmail.com
